@@ -1,0 +1,293 @@
+@import 'tailwindcss' source('../');
+
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+  @apply m-0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+  /* Fire Space Academy — negro azabache, rojo tinto, dorado y esmeralda suave */
+  --fs-black: #0d0d0d;
+  --fs-coal: #1a1a1a;
+  --fs-wine: #800000;
+  --fs-blood: #8b0000;
+  --fs-gold: #d4af37;
+  --fs-emerald: #2e7d32;
+  --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --font-typewriter: 'Special Elite', 'Courier New', monospace;
+  --content-width: 76rem;
+  --reading-width: 44rem;
+  --background: #0d0d0d;
+  --foreground: #ece3d0;
+  --card: #141313;
+  --card-foreground: #ece3d0;
+  --popover: #141212;
+  --popover-foreground: #ece3d0;
+  --primary: #8b0000;
+  --primary-foreground: #f6efe0;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ece3d0;
+  --muted: #1f1d1c;
+  --muted-foreground: #a69d8c;
+  --accent: #2a1414;
+  --accent-foreground: #d4af37;
+  --destructive: #b3261e;
+  --destructive-foreground: #fbe9e7;
+  --border: rgba(212, 175, 55, 0.18);
+  --input: rgba(212, 175, 55, 0.28);
+  --ring: #d4af37;
+  --chart-1: #8b0000;
+  --chart-2: #d4af37;
+  --chart-3: #2e7d32;
+  --chart-4: #800000;
+  --chart-5: #a69d8c;
+  --radius: 0.35rem;
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #ece3d0;
+  --sidebar-primary: #8b0000;
+  --sidebar-primary-foreground: #f6efe0;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #d4af37;
+  --sidebar-border: rgba(212, 175, 55, 0.18);
+  --sidebar-ring: #d4af37;
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.141 0.005 285.823);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.274 0.006 286.033);
+  --input: oklch(0.274 0.006 286.033);
+  --ring: oklch(0.442 0.017 285.786);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.274 0.006 286.033);
+  --sidebar-ring: oklch(0.442 0.017 285.786);
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-type: var(--font-typewriter);
+  --color-gold: var(--fs-gold);
+  --color-wine: var(--fs-wine);
+  --color-blood: var(--fs-blood);
+  --color-emerald: var(--fs-emerald);
+  --color-coal: var(--fs-coal);
+  --color-jet: var(--fs-black);
+  --container-content: var(--content-width);
+  --container-reading: var(--reading-width);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ───────────── Fire Space Academy ───────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: dark;
+}
+
+body {
+  font-size: 1.125rem;
+  background:
+    radial-gradient(ellipse at top, rgba(139, 0, 0, 0.12), transparent 60%),
+    var(--fs-black);
+}
+
+::selection {
+  background: var(--fs-blood);
+  color: #fff;
+}
+
+.font-display {
+  letter-spacing: 0.08em;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(180deg, #f3dc8a 0%, #d4af37 45%, #8a6d1d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fs-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.fs-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--fs-gold);
+}
+.fs-divider::before,
+.fs-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+}
+
+.fs-frame {
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.92), rgba(13, 13, 13, 0.96));
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6), 0 20px 50px -25px rgba(0, 0, 0, 0.9);
+}
+.fs-frame::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  pointer-events: none;
+}
+
+.fs-paper {
+  background:
+    linear-gradient(180deg, rgba(236, 227, 208, 0.04), rgba(236, 227, 208, 0.02)),
+    #121010;
+  border: 1px solid rgba(236, 227, 208, 0.1);
+}
+
+.fs-redacted {
+  background: #ece3d0;
+  color: transparent;
+  border-radius: 1px;
+  padding: 0 0.15em;
+  user-select: none;
+}
+
+.fs-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.fs-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes fs-flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.92; }
+  47% { opacity: 0.6; }
+  49% { opacity: 0.95; }
+  70% { opacity: 0.85; }
+}
+.fs-flicker {
+  animation: fs-flicker 6s infinite;
+}
+
+@keyframes fs-drift {
+  from { transform: scale(1.08) translate3d(0, 0, 0); }
+  to { transform: scale(1.16) translate3d(-1.5%, -1%, 0); }
+}
+.fs-drift {
+  animation: fs-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes fs-ember {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translateY(-110vh) scale(0.4); opacity: 0; }
+}
+.fs-ember {
+  position: absolute;
+  bottom: -10px;
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: #ff5a36;
+  box-shadow: 0 0 8px 2px rgba(255, 70, 30, 0.6);
+  animation: fs-ember linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fs-reveal { opacity: 1; transform: none; transition: none; }
+  .fs-drift, .fs-flicker, .fs-ember { animation: none; }
+}

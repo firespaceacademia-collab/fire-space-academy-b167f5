@@ -1,0 +1,40 @@
+{
+  "_LEEME": [
+    "══════════ SOLICITUDES DE ADMISIÓN — FIRE SPACE ACADEMY ══════════",
+    "Este archivo documenta la estructura de cada solicitud enviada desde el Portal de Admisiones.",
+    "",
+    "Las solicitudes REALES se guardan en la base de datos del sitio (Netlify Database), porque un archivo",
+    "estático no puede ser modificado por los visitantes. Así cada ficha nueva aparece al instante en",
+    "\"Solicitudes Pendientes\" para todos, sin necesidad de volver a publicar el sitio.",
+    "",
+    "Para obtener una copia actualizada de TODAS las solicitudes en formato solicitudes.json:",
+    "  Portal de Admisiones → pestaña \"Solicitudes Pendientes\" → botón \"Exportar solicitudes.json\"",
+    "  (requiere el código de administrador).",
+    "",
+    "ESTADOS POSIBLES:",
+    "  \"evaluacion\" → se muestra como \"Ficha en proceso de evaluación\" (estado inicial)",
+    "  \"aceptada\"   → se muestra como \"Ficha Aceptada\"",
+    "  \"rechazada\"  → se muestra como \"Ficha Rechazada\" y se elimina automáticamente 24 horas después",
+    "",
+    "CÓDIGOS:",
+    "  \"codigo\": código único del postulante (FS-XXXX). Sirve para que él mismo elimine su solicitud.",
+    "  Código de administrador: necesario para ver la información completa y para Aceptar / Rechazar.",
+    "",
+    "Cuando una ficha sea aceptada, añade al personaje al Directorio copiando sus datos a data/estudiantes.json."
+  ],
+
+  "_ESTRUCTURA_DE_UNA_SOLICITUD": {
+    "id": 1,
+    "codigo": "FS-8492",
+    "nombre": "Nombre del Personaje",
+    "edadOn": 18,
+    "edadOff": 20,
+    "inteligencia": "Artística | Académica | Deportiva",
+    "talentos": "Talentos y habilidades del personaje",
+    "estado": "evaluacion",
+    "createdAt": "2026-10-22T20:00:00.000Z",
+    "rechazadaAt": null
+  },
+
+  "solicitudes": []
+}

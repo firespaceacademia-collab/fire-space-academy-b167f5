@@ -1,0 +1,67 @@
+{
+  "_LEEME": [
+    "══════════ DIRECTORIO OFICIAL DE ESTUDIANTES — FIRE SPACE ACADEMY ══════════",
+    "Este archivo es la ÚNICA fuente del Directorio de Estudiantes y del Muro de Destacados.",
+    "Edítalo a mano: los cambios aparecen en la página en cuanto se publique (deploy) el sitio.",
+    "",
+    "CÓMO AÑADIR UN NUEVO INTEGRANTE (actualización semanal):",
+    "  1. Copia el bloque completo de '_PLANTILLA_PARA_COPIAR' (desde la llave { hasta la llave }).",
+    "  2. Pégalo dentro de la lista \"estudiantes\": [ ... ], después del último estudiante.",
+    "  3. Separa cada estudiante del anterior con una coma ,  (¡el último NO lleva coma después!).",
+    "  4. Rellena los campos. Usa comillas dobles \" \" en los textos.",
+    "",
+    "CÓMO QUITAR A UN ESTUDIANTE: borra su bloque { ... } completo y revisa que las comas queden bien.",
+    "CÓMO CAMBIAR DE RANGO O PUNTOS: modifica solo los campos \"rango\" o \"puntos\" de ese estudiante.",
+    "",
+    "VALORES PERMITIDOS:",
+    "  \"inteligencia\": \"Académica\" | \"Artística\" | \"Deportiva\" | \"Personal\"",
+    "  \"rango\":        \"Élite\" | \"Avanzado\" | \"Destacado\" | \"Aspirante\" | \"Candidato\" | \"Becado\"",
+    "  \"puntos\":       un número sin comillas (ej. 0, 45, 120). Se muestra como \"00 pts\", \"120 pts\".",
+    "  \"edadOn\":       la edad del personaje, por ejemplo \"18 años\".",
+    "  \"edadOff\":      edad real del usuario. Se guarda aquí como registro interno y NUNCA se muestra en la página.",
+    "  \"muroDestacados\": true para que aparezca en el Muro de Estudiantes Destacados, false para ocultarlo ahí.",
+    "  \"descripcion\":  texto del expediente. Para separar párrafos escribe \\n\\n dentro del texto.",
+    "  \"documentos\":   lista opcional de enlaces (fichas en PDF, documentos externos). Déjala como [] si no hay.",
+    "",
+    "CÓMO PONER LA IMAGEN DE UN EXPEDIENTE:",
+    "  Opción A (recomendada): sube la foto a la carpeta  public/img/estudiantes/  (ej. public/img/estudiantes/sakuya.jpg)",
+    "             y escribe en \"imagen\": \"/img/estudiantes/sakuya.jpg\"  (sin la palabra public).",
+    "  Opción B: pega un enlace directo a una imagen de internet, ej. \"imagen\": \"https://i.imgur.com/xxxx.jpg\".",
+    "  Si \"imagen\" queda vacío (\"\"), el expediente muestra el emblema de Fire Space.",
+    "  Formato ideal: vertical (retrato), 3:4, por ejemplo 900 x 1200 px.",
+    "",
+    "IMPORTANTE: el \"id\" debe ser único, en minúsculas y sin espacios (ej. \"sakuya\", \"min-ho\")."
+  ],
+
+  "_PLANTILLA_PARA_COPIAR": {
+    "id": "nombre-en-minusculas",
+    "nombre": "Nombre del Personaje",
+    "edadOn": "18 años",
+    "edadOff": "",
+    "inteligencia": "Artística",
+    "rango": "Aspirante",
+    "puntos": 0,
+    "muroDestacados": false,
+    "imagen": "",
+    "descripcion": "Historia / lore completo del personaje.",
+    "documentos": [
+      { "titulo": "Ficha completa (PDF)", "url": "https://enlace-a-tu-documento" }
+    ]
+  },
+
+  "estudiantes": [
+    {
+      "id": "sakuya",
+      "nombre": "Sakuya",
+      "edadOn": "18 años",
+      "edadOff": "",
+      "inteligencia": "Artística",
+      "rango": "Aspirante",
+      "puntos": 0,
+      "muroDestacados": true,
+      "imagen": "",
+      "descripcion": "Sakuya llega a Fire Space cargando sus propios secretos y motivaciones, navegando con agudeza entre las rivalidades de los grupos, el peligro invisible de los Becados y la opresiva vigilancia de la administración y el periódico clandestino \"Los Intrusos\".",
+      "documentos": []
+    }
+  ]
+}
