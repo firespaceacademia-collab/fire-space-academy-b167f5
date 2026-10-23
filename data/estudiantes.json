@@ -63,18 +63,6 @@
       "descripcion": "Sakuya llega a Fire Space cargando sus propios secretos y motivaciones, navegando con agudeza entre las rivalidades de los grupos, el peligro invisible de los Becados y la opresiva vigilancia de la administración y el periódico clandestino \"Los Intrusos\".",
       "documentos": []
     },
-    {
-    "id": "evan",
-    "nombre": "Evan",
-    "edadOn": "19 años",
-    "edadOff": "",
-    "inteligencia": "Artística",
-    "rango": "Destacado",
-    "puntos": 390,
-    "muroDestacados": false,
-    "imagen": "",
-    "descripcion": "lore en proceso",
-    "documentos": []
-  },
+    
   ]
 }
